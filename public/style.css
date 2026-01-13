@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Center container */
+#loginBox, #dashboard {
+  width: 360px;
+  margin: 80px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e4ed8;
+}
+
+/* Orders list */
+#orders {
+  list-style: none;
+  padding: 0;
+}
+
+#orders li {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#orders input {
+  margin-bottom: 6px;
+}
+
+/* Delete button */
+#orders button:last-child {
+  background: #dc2626;
+}
+
+#orders button:last-child:hover {
+  background: #b91c1c;
+}
+
+/* Error text */
+#error {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
