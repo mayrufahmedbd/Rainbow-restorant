@@ -1,0 +1,106 @@
+[
+    {
+        "categoryName": "Lunch Set Menu",
+        "note": "AVAILABLE LUNCH TIME ONLY",
+        "type": "set",
+        "items": [
+            {
+                "name": "Set Menu 1",
+                "price": "260/-",
+                "image": "https://placehold.co/400x300/1e293b/fbbf24?text=Set+Menu+1",
+                "description": "Chicken Chowmein, Bangkok Style Chicken Fried (2pcs), French Fry, Soft Drink"
+            },
+            {
+                "name": "Set Menu 2",
+                "price": "260/-",
+                "image": "https://placehold.co/400x300/1e293b/fbbf24?text=Set+Menu+2",
+                "description": "Bangladeshi Chowmein, Chicken Wings (2pcs), French Fry, Soft Drink"
+            },
+            {
+                "name": "Set Menu 3",
+                "price": "280/-",
+                "image": "https://placehold.co/400x300/1e293b/fbbf24?text=Set+Menu+3",
+                "description": "Egg Fried Rice, Bangkok Style Chicken Fried (2pcs), Mixed Vegetable, Soft Drink"
+            }
+        ]
+    },
+    {
+        "categoryName": "Szechuan Dishes",
+        "type": "regular",
+        "subcategories": [
+            {
+                "subName": "Soup",
+                "items": [
+                    {
+                        "code": "C11",
+                        "name": "Szu-Chun Soup",
+                        "price": "540/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Soup"
+                    },
+                    {
+                        "code": "C12",
+                        "name": "Rainbow Special Soup",
+                        "price": "480/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Special+Soup"
+                    },
+                    {
+                        "code": "C13",
+                        "name": "Thai Soup",
+                        "meta": "Thick",
+                        "price": "420/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Thai+Soup"
+                    }
+                ]
+            },
+            {
+                "subName": "Main Dishes",
+                "items": [
+                    {
+                        "code": "C28",
+                        "name": "Szu-Chuan Fried Chicken",
+                        "meta": "By Order",
+                        "price": "480/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Fried+Chicken"
+                    },
+                    {
+                        "code": "C29",
+                        "name": "Szu-Chuan Chicken Chili",
+                        "meta": "Dry",
+                        "price": "520/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Chili+Chicken"
+                    },
+                    {
+                        "code": "C33",
+                        "name": "Szu-Chuan Garlic Prawn",
+                        "price": "580/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Garlic+Prawn"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "categoryName": "Thai Dishes",
+        "type": "regular",
+        "subcategories": [
+            {
+                "subName": "Soup & Mains",
+                "items": [
+                    {
+                        "code": "T1",
+                        "name": "Tom Yam Goong",
+                        "meta": "Prawn & Mushroom",
+                        "price": "600/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Tom+Yam"
+                    },
+                    {
+                        "code": "T25",
+                        "name": "Thai Fried Rice",
+                        "price": "550/-",
+                        "image": "https://placehold.co/150x150/1e293b/fbbf24?text=Thai+Rice"
+                    }
+                ]
+            }
+        ]
+    }
+]
