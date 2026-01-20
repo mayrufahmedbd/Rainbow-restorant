@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow | Modern Menu</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Rainbow Restaurant Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">Rainbow</div>
-        <div class="subtitle">Chinese · Thai · Continental</div>
+        <h1>Restaurant Name</h1>
+        <div class="subtitle">Location</div>
+        
+        <div class="filter-container" id="filterContainer">
+            <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+            </div>
     </header>
 
-    <div class="container">
-        <div id="menu-container"></div>
-    </div>
+    <main class="menu-container" id="menuContainer">
+        </main>
 
-    <footer>
-        <div class="address">
-            Rainbow Complex, Mirboxtula<br>Sylhet 3100, Bangladesh
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Product Name</h2>
+            <p>You clicked "Click Here". Interaction successful!</p>
         </div>
-        <a href="tel:01711221155" class="contact-btn">📞 Call to Order</a>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,89 +1,116 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('menu-container');
-
-    // Fetch the data from JSON file
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            renderMenu(data);
+    // 1. Fetch the JSON data
+    fetch('menu.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("HTTP error " + response.status);
+            }
+            return response.json();
         })
-        .catch(error => {
-            console.error('Error loading menu:', error);
-            container.innerHTML = '<p style="text-align:center; color:red;">Failed to load menu data. Please run on a local server.</p>';
+        .then(data => {
+            initMenu(data);
+        })
+        .catch(function(err) {
+            console.error("Failed to load menu.json:", err);
+            document.getElementById('menuContainer').innerHTML = "<p>Error loading menu data.</p>";
         });
-
-    function renderMenu(categories) {
-        categories.forEach(category => {
-            const section = document.createElement('section');
-            section.className = 'category-section';
-
-            // 1. Create Category Title
-            let headerHTML = `<h2 class="category-title">${category.categoryName}</h2>`;
-            if (category.note) {
-                headerHTML += `<span class="set-note">${category.note}</span>`;
-            }
-            section.innerHTML = headerHTML;
-
-            // 2. Check if it's a Set Menu (Card Style) or Regular (List Style)
-            if (category.type === 'set') {
-                const grid = document.createElement('div');
-                grid.className = 'items-grid';
-                
-                category.items.forEach(item => {
-                    grid.innerHTML += `
-                        <div class="set-card">
-                            <img src="${item.image}" alt="${item.name}" class="set-img" onerror="this.src='https://placehold.co/400x300?text=No+Image'">
-                            <div class="set-content">
-                                <div class="set-header">
-                                    <span class="set-title">${item.name}</span>
-                                    <span class="set-price">${item.price}</span>
-                                </div>
-                                <p class="set-desc">${item.description}</p>
-                            </div>
-                        </div>
-                    `;
-                });
-                section.appendChild(grid);
-            } 
-            // 3. Regular Menu with Subcategories
-            else {
-                category.subcategories.forEach(sub => {
-                    // Add Subcategory Title
-                    if(sub.subName) {
-                        const subTitle = document.createElement('div');
-                        subTitle.className = 'sub-category-title';
-                        subTitle.textContent = sub.subName;
-                        section.appendChild(subTitle);
-                    }
-
-                    const grid = document.createElement('div');
-                    grid.className = 'items-grid';
-
-                    sub.items.forEach(item => {
-                        // Check if meta exists
-                        const metaHtml = item.meta ? `<div class="item-meta">${item.meta}</div>` : '';
-                        
-                        grid.innerHTML += `
-                            <div class="menu-item">
-                                <img src="${item.image}" alt="${item.name}" class="menu-item-img" onerror="this.src='https://placehold.co/150x150?text=No+Image'">
-                                <div class="menu-details">
-                                    <div class="item-top">
-                                        <div>
-                                            <span class="item-code">${item.code}</span>
-                                            <span class="item-name">${item.name}</span>
-                                        </div>
-                                        <div class="item-price">${item.price}</div>
-                                    </div>
-                                    ${metaHtml}
-                                </div>
-                            </div>
-                        `;
-                    });
-                    section.appendChild(grid);
-                });
-            }
-
-            container.appendChild(section);
-        });
-    }
 });
+
+let allMenuItems = [];
+let currencySymbol = "";
+
+// 2. Initialize the Menu
+function initMenu(data) {
+    allMenuItems = data.menu_items;
+    currencySymbol = data.restaurant_info.currency;
+    
+    // Set Header Info
+    document.querySelector('h1').innerText = data.restaurant_info.name;
+    document.querySelector('.subtitle').innerText = data.restaurant_info.location;
+
+    renderCategories(allMenuItems);
+    renderMenu(allMenuItems);
+}
+
+// 3. Render Category Buttons
+function renderCategories(items) {
+    const filterContainer = document.getElementById('filterContainer');
+    const categories = new Set(items.map(item => item.category));
+    
+    categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.innerText = cat;
+        btn.onclick = () => filterMenu(cat);
+        filterContainer.appendChild(btn);
+    });
+}
+
+// 4. Filter Function
+function filterMenu(category) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // Toggle Active Class
+    buttons.forEach(btn => {
+        if(btn.innerText === category || (category === 'all' && btn.innerText === 'All')) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Filter Logic
+    if (category === 'all') {
+        renderMenu(allMenuItems);
+    } else {
+        const filtered = allMenuItems.filter(item => item.category === category);
+        renderMenu(filtered);
+    }
+}
+
+// 5. Render Menu Cards
+function renderMenu(items) {
+    const container = document.getElementById('menuContainer');
+    container.innerHTML = ''; // Clear current content
+
+    items.forEach(item => {
+        // Default description if missing
+        const desc = item.description ? item.description : 'Delicious authentic cuisine.';
+        
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <div class="card-image-placeholder">🍽️</div>
+            <div class="card-content">
+                <span class="category-tag">${item.category}</span>
+                <h3 class="card-title">${item.name} <small style="font-size:0.8em; color:#888">(${item.id})</small></h3>
+                <p class="card-desc">${desc}</p>
+                <div class="card-price">${currencySymbol} ${item.price}</div>
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="openModal('${item.name}')">Click Here</button>
+                    <a href="${item.product_link}" class="btn btn-primary">Go to Product</a>
+                </div>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// 6. Modal Functions
+function openModal(itemName) {
+    const modal = document.getElementById('quickViewModal');
+    document.getElementById('modalTitle').innerText = itemName;
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById('quickViewModal').style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('quickViewModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

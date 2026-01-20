@@ -1,0 +1,327 @@
+{
+  "restaurant_info": {
+    "name": "Rainbow Chinese, Thai & Continental Cuisine",
+    "location": "Sylhet, Bangladesh",
+    "currency": "BDT"
+  },
+  "menu_items": [
+    {
+      "id": "C98",
+      "name": "Chicken Fried Rice",
+      "category": "Rice",
+      "price": 380,
+      "image_url": "images/c98_chicken_fried_rice.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c98" }
+      ]
+    },
+    {
+      "id": "C99",
+      "name": "Prawn Fried Rice",
+      "category": "Rice",
+      "price": 410,
+      "image_url": "images/c99_prawn_fried_rice.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c99" }
+      ]
+    },
+    {
+      "id": "C100",
+      "name": "Beef Fried Rice",
+      "category": "Rice",
+      "price": 370,
+      "image_url": "images/c100_beef_fried_rice.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c100" }
+      ]
+    },
+    {
+      "id": "C106",
+      "name": "Chicken Chowmein",
+      "category": "Noodles & Chop Suey",
+      "price": 330,
+      "image_url": "images/c106_chicken_chowmein.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c106" }
+      ]
+    },
+    {
+      "id": "C111",
+      "name": "American Chopsuey",
+      "category": "Noodles & Chop Suey",
+      "price": 420,
+      "image_url": "images/c111_american_chopsuey.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c111" }
+      ]
+    },
+    {
+      "id": "C114",
+      "name": "Mixed Vegetable Soup",
+      "category": "Vegetarian",
+      "price": 270,
+      "image_url": "images/c114_mixed_veg_soup.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c114" }
+      ]
+    },
+    {
+      "id": "SM1",
+      "name": "Set Menu-1",
+      "description": "Chicken Chowmein, Bangkok Style Chicken Fried (2pcs), French Fry, Drinks",
+      "category": "Set Menu",
+      "price": 260,
+      "image_url": "images/set_menu_1.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/sm1" }
+      ]
+    },
+    {
+      "id": "SM5",
+      "name": "Set Menu-5",
+      "description": "Egg Fried Rice, Fried Spring Chicken (1pcs), Mansorian Chicken / Beef, Drinks",
+      "category": "Set Menu",
+      "price": 325,
+      "image_url": "images/set_menu_5.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/sm5" }
+      ]
+    },
+    {
+      "id": "C63",
+      "name": "Special China Prawn (Masala)",
+      "description": "8 Pcs",
+      "category": "Prawn",
+      "price": 600,
+      "image_url": "images/c63_special_china_prawn.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c63" }
+      ]
+    },
+    {
+      "id": "C67",
+      "name": "Prawn with Garlic Sauce",
+      "category": "Prawn",
+      "price": 520,
+      "image_url": "images/c67_prawn_garlic_sauce.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c67" }
+      ]
+    },
+    {
+      "id": "C74",
+      "name": "Beef with Vegetable",
+      "category": "Beef",
+      "price": 370,
+      "image_url": "images/c74_beef_vegetable.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c74" }
+      ]
+    },
+    {
+      "id": "C76",
+      "name": "Beef Chille Onion",
+      "category": "Beef",
+      "price": 470,
+      "image_url": "images/c76_beef_chille_onion.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c76" }
+      ]
+    },
+    {
+      "id": "C86",
+      "name": "Fried Pomfret",
+      "description": "2 Pcs",
+      "category": "Fish",
+      "price": 800,
+      "image_url": "images/c86_fried_pomfret.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c86" }
+      ]
+    },
+    {
+      "id": "C92",
+      "name": "Steamed Fish with Chinese Sauce",
+      "category": "Fish",
+      "price": 500,
+      "image_url": "images/c92_steamed_fish.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c92" }
+      ]
+    },
+    {
+      "id": "T1",
+      "name": "Tom Yam Goong",
+      "description": "Thai Soup Prawn with Mushroom",
+      "category": "Thai Dishes - Soup",
+      "price": 600,
+      "image_url": "images/t1_tom_yam_goong.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/t1" }
+      ]
+    },
+    {
+      "id": "T7",
+      "name": "Labb Gai Salad",
+      "description": "Chicken, Prawn with onion lemon juice & spices",
+      "category": "Thai Dishes - Appetizers",
+      "price": 600,
+      "image_url": "images/t7_labb_gai_salad.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/t7" }
+      ]
+    },
+    {
+      "id": "A",
+      "name": "Special Corn Flowar Soup",
+      "category": "Chefs Special",
+      "price": 440,
+      "image_url": "images/chef_a_corn_soup.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/chefa" }
+      ]
+    },
+    {
+      "id": "H",
+      "name": "Special Style Chicken",
+      "category": "Chefs Special",
+      "price": 520,
+      "image_url": "images/chef_h_special_chicken.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/chefh" }
+      ]
+    },
+    {
+      "id": "C43",
+      "name": "Chicken with Mixed Vegetable",
+      "category": "Chicken",
+      "price": 340,
+      "image_url": "images/c43_chicken_mixed_veg.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c43" }
+      ]
+    },
+    {
+      "id": "C48",
+      "name": "Fried Spring Chicken",
+      "description": "4/6 Pcs",
+      "category": "Chicken",
+      "price": 440,
+      "image_url": "images/c48_fried_spring_chicken.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c48" }
+      ]
+    },
+    {
+      "id": "C11",
+      "name": "Szu-Chun Soup",
+      "category": "Soup",
+      "price": 540,
+      "image_url": "images/c11_szu_chun_soup.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c11" }
+      ]
+    },
+    {
+      "id": "C24",
+      "name": "Woon Tun Soup",
+      "category": "Soup",
+      "price": 430,
+      "image_url": "images/c24_woon_tun_soup.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c24" }
+      ]
+    },
+    {
+      "id": "C28",
+      "name": "Szu-Chuan Fried Chicken",
+      "description": "By Order",
+      "category": "Szechuan Dishes",
+      "price": 480,
+      "image_url": "images/c28_szuchuan_fried_chicken.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c28" }
+      ]
+    },
+    {
+      "id": "C33",
+      "name": "Szu-Chuan Garlic Prawn",
+      "category": "Szechuan Dishes",
+      "price": 580,
+      "image_url": "images/c33_szuchuan_garlic_prawn.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c33" }
+      ]
+    },
+    {
+      "id": "T16",
+      "name": "Steam Red Snapper",
+      "description": "By Order",
+      "category": "Thai Main Dishes",
+      "price": 1000,
+      "image_url": "images/t16_steam_red_snapper.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/t16" }
+      ]
+    },
+    {
+      "id": "T25",
+      "name": "Thai Fried Rice",
+      "category": "Thai Main Dishes",
+      "price": 550,
+      "image_url": "images/t25_thai_fried_rice.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/t25" }
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "Szu-Chicken & Prawn Salad",
+      "category": "Chinese Dishes - Appetizers",
+      "price": 550,
+      "image_url": "images/c1_szu_chicken_prawn_salad.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c1" }
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "Fried Prawn Ball Palate",
+      "description": "8 Pcs",
+      "category": "Chinese Dishes - Starters",
+      "price": 570,
+      "image_url": "images/c3_fried_prawn_ball.jpg",
+      "actions": [
+        { "label": "Click Here", "action_type": "quick_view", "target": "#" },
+        { "label": "Go to Product", "action_type": "navigate", "target": "/product/c3" }
+      ]
+    }
+  ]
+}
